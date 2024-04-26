@@ -2,7 +2,7 @@ package Books;
 
 public class RussianEducationalBook extends EducationalBook {
 
-    public String type;
+    protected String type;
     
     public RussianEducationalBook(String subject, String language, String type) {
         super(subject, language);
@@ -10,9 +10,7 @@ public class RussianEducationalBook extends EducationalBook {
     }
 
     @Override
-    public String getFullString() {
+    public String getFullInfo() {
         return "Дисциплина - " + subject + ", язык - " + language + ", тип - " + type;
     }
-    
-    
 }

@@ -3,9 +3,9 @@ package Books;
 
 public abstract class EducationalBook {
 
-    public String subject;
-    public String language;
-    public String author;
+    protected String subject;
+    protected String language;
+    protected String author;
     
 
     public EducationalBook(String subject, String language) {
@@ -13,6 +13,5 @@ public abstract class EducationalBook {
         this.language = language;
     }
     
-    public abstract String getFullString();
-
+    public abstract String getFullInfo();
 }

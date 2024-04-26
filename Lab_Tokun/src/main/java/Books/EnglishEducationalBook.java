@@ -2,19 +2,19 @@ package Books;
 
 public class EnglishEducationalBook extends EducationalBook {
     
-    public String author;
-    public String level;
-    public String uni;
+    protected String author;
+    protected String level;
+    protected String university;
     
-    public EnglishEducationalBook(String subject, String language, String author, String level, String uni) {
+    public EnglishEducationalBook(String subject, String language, String author, String level, String university) {
         super(subject, language);
         this.author = author;
         this.level = level;
-        this.uni = uni;
+        this.university = university;
     }
 
     @Override
-    public String getFullString() {
-        return "Дисциплина - " + subject + ", язык - " + language + ", автор - " + author + ", уровень - " + level +", университет - " + uni  ;
+    public String getFullInfo() {
+        return "Subject: " + subject + ", Language: " + language + ", Author: " + author + ", Level: " + level +", University: " + university;
     }
 }

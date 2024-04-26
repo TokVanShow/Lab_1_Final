@@ -6,7 +6,7 @@ import Books.EducationalBook;
 
 public interface BookFactory {
 
-    FictionBook createFictionBook(int a, int b);
+    FictionBook createFictionBook(int index, int year);
 
-    EducationalBook createEducationalBook(int a, int b);
+    EducationalBook createEducationalBook(int index, int year);
 }

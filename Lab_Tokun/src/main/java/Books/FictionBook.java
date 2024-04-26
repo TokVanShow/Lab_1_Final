@@ -1,11 +1,13 @@
 
 package Books;
 
+
+
 public abstract class FictionBook {
 
-    public String name;
-    public String language;
-    public int year;
+    protected String name;
+    protected String language;
+    protected int year;
 
     public FictionBook(String name, String language, int year) {
         this.name = name;
@@ -13,6 +15,5 @@ public abstract class FictionBook {
         this.year = year;
     }
 
-    public abstract String getFullString();
-    
+    public abstract String getFullInfo();
 }

@@ -84,7 +84,7 @@ public class Emulator extends javax.swing.JFrame {
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
         System.exit(0);
     }//GEN-LAST:event_exitButtonActionPerformed
-    private void load() {
+private void load() {
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("Root");
         DefaultMutableTreeNode students = new DefaultMutableTreeNode("Students");
         DefaultMutableTreeNode teachers = new DefaultMutableTreeNode("Teachers");
@@ -99,9 +99,9 @@ public class Emulator extends javax.swing.JFrame {
     private void addToTree(HumanType type) {
 
         HumanFactory factory = new HumanFactory();
-        Human user = factory.createHuman(type == HumanType.STUDENT ? "Студент" : "Преподаватель");
+        Human user = factory.createHuman(type == HumanType.STUDENT ? "Student" : "Teacher");
 
-        DefaultMutableTreeNode concreteUser = new DefaultMutableTreeNode(user.getCompleteName());
+        DefaultMutableTreeNode concreteUser = new DefaultMutableTreeNode(user.getFullName());
         user.fillNode(concreteUser);
 
         DefaultMutableTreeNode root = (DefaultMutableTreeNode) model.getRoot();

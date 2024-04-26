@@ -8,7 +8,7 @@ public class Student extends Human {
     }
 
     @Override
-    public String getCompleteName() {
-        return "Студент " + this.surname + "  " +  this.name;
+    public String getFullName() {
+        return "Student " + this.surname + "  " +  this.name;
     }
 }

@@ -7,7 +7,7 @@ public class RussianFictionBook extends FictionBook {
     }
     
     @Override
-    public String getFullString() {
-        return "Название - " + name + ", язык - " + language + ", год - " + year;
+    public String getFullInfo() {
+        return "Название: " + name + ", Язык: " + language + ", Год: " + year;
     }
 }

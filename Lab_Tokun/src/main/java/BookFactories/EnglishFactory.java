@@ -4,16 +4,18 @@ package BookFactories;
 import Lab1.Storage;
 import Books.*;
 
-public class EnglishFactory implements BookFactory {     
+public class EnglishFactory implements BookFactory {
+
     @Override
-    public FictionBook createFictionBook(int a, int b) {
-        return new EnglishFictionBook(Storage.getInstance().returnEnFicList()[a],"English",b);
+    public FictionBook createFictionBook(int index, int year) {
+        return new EnglishFictionBook(Storage.getInstance().getEnglishFictionTitles()[index], "English", year);
     }
 
     @Override
-    public EducationalBook createEducationalBook(int a, int b) {
-  
-        return new EnglishEducationalBook(Storage.getInstance().returnEnDisciplines()[a][0],"English",Storage.getInstance().returnEnDisciplines()[a][2],
-                Storage.getInstance().returnLevels()[b],Storage.getInstance().returnEnDisciplines()[a][1]);
+    public EducationalBook createEducationalBook(int index, int year) {
+        return new EnglishEducationalBook(Storage.getInstance().getEnglishDisciplines()[index][0], "English",
+                Storage.getInstance().getEnglishDisciplines()[index][2],
+                Storage.getInstance().getLevels()[(int) (Math.random() * Storage.getInstance().getLevels().length)],
+                Storage.getInstance().getEnglishDisciplines()[index][1]);
     }
 }

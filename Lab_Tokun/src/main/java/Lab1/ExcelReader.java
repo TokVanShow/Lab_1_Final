@@ -27,14 +27,14 @@ public class ExcelReader {
                             rowData.add(cell.getStringCellValue());
                             break;
                         case NUMERIC:
-                            rowData.add(String.valueOf(cell.getNumericCellValue()));
+                            rowData.add(String.valueOf((int) cell.getNumericCellValue()));
                             break;
                         default:
-                            rowData.add(""); // Добавляем пустую строку, если тип ячейки не строка и не числовой
+                            rowData.add(""); 
                             break;
                     }
                 } else {
-                    rowData.add(""); // Добавляем пустую строку вместо null значения
+                    rowData.add(""); 
                 }
             }
             dataWithoutGaps.add(rowData);

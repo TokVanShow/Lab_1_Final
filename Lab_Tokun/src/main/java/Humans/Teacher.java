@@ -2,7 +2,7 @@ package Humans;
 
 public class Teacher extends Human {
 
-    public String patronymic;
+    protected String patronymic;
 
     public Teacher(String name, String surname, String patronymic) {
         super(name, surname);
@@ -10,7 +10,7 @@ public class Teacher extends Human {
     }
 
     @Override
-    public String getCompleteName() {
-        return "Преподаватель " + this.surname + "  " + this.name + " " + this.patronymic;
+    public String getFullName() {
+        return "Teacher " + this.surname + "  " + this.name + " " + this.patronymic;
     }
 }

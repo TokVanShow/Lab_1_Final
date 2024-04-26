@@ -1,5 +1,6 @@
 package Books;
 
+
 public class EnglishFictionBook extends FictionBook {
 
     public EnglishFictionBook(String name, String language, int year) {
@@ -7,7 +8,7 @@ public class EnglishFictionBook extends FictionBook {
     }
 
     @Override
-    public String getFullString() {
-        return "Название - " + name + ", язык - " + language + ", год - " + year;
+    public String getFullInfo() {
+        return "Title: " + name + ", Language: " + language + ", Year: " + year;
     }
 }
