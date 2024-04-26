@@ -77,14 +77,17 @@ public class Emulator extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void loadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadButtonActionPerformed
-        int userType = (int) (Math.random() * 2);
-        addToTree(userType == 0 ? HumanType.STUDENT : HumanType.TEACHER);
+        int numberOfPeople = (int) (Math.random() * 6) + 5; // Генерируем случайное число от 5 до 10
+        for (int i = 0; i < numberOfPeople; i++) {
+            int userType = (int) (Math.random() * 2);
+            addToTree(userType == 0 ? HumanType.STUDENT : HumanType.TEACHER);
+        }
     }//GEN-LAST:event_loadButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
         System.exit(0);
     }//GEN-LAST:event_exitButtonActionPerformed
-private void load() {
+    private void load() {
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("Root");
         DefaultMutableTreeNode students = new DefaultMutableTreeNode("Students");
         DefaultMutableTreeNode teachers = new DefaultMutableTreeNode("Teachers");
